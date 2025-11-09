@@ -1,16 +1,22 @@
 {
   "manifest_version": 2,
   "name": "Auto Close All Tabs",
-  "version": "1.0",
-  "description": "Closes all tabs after a specified period of inactivity. This is targeted for example of using in docker environment to reduce load on host after inactivity.",
+  "version": "1.1",
+  "description": "Closes all tabs after a specified period of inactivity. This version is specifically tailored to be Docker-proof and work reliably with environments like jlesage/docker-firefox.",
   "permissions": [
     "tabs",
     "storage",
-    "idle"
+    "<all_urls>"
   ],
   "background": {
     "scripts": ["background.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "options_ui": {
     "page": "options.html",
     "open_in_tab": false
