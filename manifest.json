@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Auto Close All Tabs",
   "version": "1.0",
-  "description": "Closes all tabs after a specified period of inactivity.",
+  "description": "Closes all tabs after a specified period of inactivity. This is targeted for example of using in docker environment to reduce load on host after inactivity.",
   "permissions": [
     "tabs",
     "storage",

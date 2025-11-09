@@ -47,7 +47,7 @@ function start() {
 
   browser.storage.local.get("timeout").then((result) => {
     // Enforce a minimum of 15 seconds for the timeout.
-    timeout = Math.max(IDLE_QUERY_INTERVAL, result.timeout || 60);
+    timeout = Math.max(IDLE_QUERY_INTERVAL, result.timeout || 600);
     
     lastActivity = Date.now();
     intervalID = setInterval(checkIdle, 1000);

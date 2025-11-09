@@ -17,7 +17,7 @@ function saveOptions(e) {
 
 function restoreOptions() {
   function setCurrentChoice(result) {
-    timeoutInput.value = Math.max(MIN_TIMEOUT, result.timeout || 60);
+    timeoutInput.value = Math.max(MIN_TIMEOUT, result.timeout || 600);
   }
 
   function onError(error) {
