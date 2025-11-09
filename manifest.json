@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Auto Close All Tabs",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Closes all tabs after a specified period of inactivity. This version is specifically tailored to be Docker-proof and work reliably with environments like jlesage/docker-firefox.",
   "permissions": [
     "tabs",
@@ -23,5 +23,13 @@
   },
   "browser_action": {
     "default_title": "Auto Close All Tabs"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "auto-close-all-tabs@example.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
   }
 }
